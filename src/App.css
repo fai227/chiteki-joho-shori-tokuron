@@ -1,0 +1,102 @@
+.App {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #e0f7fa;
+  /* 背景色を水色に */
+  border-radius: 16px;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  /* 全体のスクロールを禁止 */
+}
+
+header {
+  text-align: center;
+  height: 75px;
+  font-size: 2em;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 20px;
+  max-height: calc(100vh - 160px);
+  /* 画面全体の高さから他の要素の高さを引いた値 */
+  overflow-y: auto;
+  /* スクロールを有効にする */
+}
+
+.output,
+.input {
+  width: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 32px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.output {
+  background-color: #ffffff;
+  /* outputの背景色を白に */
+  align-self: flex-start;
+  /* 左寄せにする */
+}
+
+.input {
+  background-color: #dcf8c6;
+  /* inputの背景色を緑に */
+  align-self: flex-end;
+  /* 右寄せにする */
+}
+
+.form {
+  position: absolute;
+  bottom: 20px;
+  width: calc(100% - 40px);
+  display: flex;
+}
+
+.form input {
+  flex: 1;
+  height: 40px;
+  margin-right: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+.form input:focus {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.form button {
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: none;
+  background-color: #007bff;
+  background-image: url('arrow.png');
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+
+.form button:active {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
