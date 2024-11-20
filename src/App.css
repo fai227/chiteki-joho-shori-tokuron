@@ -27,6 +27,35 @@ header {
   /* 画面全体の高さから他の要素の高さを引いた値 */
   overflow-y: auto;
   /* スクロールを有効にする */
+  align-items: center;
+  /* 要素を中央寄せにする */
+}
+
+.chat button {
+  width: 150px;
+  height: 50px;
+  background-color: #00c300;
+  /* LINEのイメージに近い緑色 */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+  /* ボタンの高さを固定 */
+
+  display: none;
+}
+
+.chat button:hover {
+  background-color: #009900;
+  /* ホバー時の色を少し濃くする */
+}
+
+.chat button:active {
+  box-shadow: 0 0 10px rgba(0, 153, 0, 0.5);
+  /* アクティブ時の影の色を調整 */
 }
 
 .output,
@@ -51,6 +80,38 @@ header {
   align-self: flex-end;
   /* 右寄せにする */
 }
+
+.diary {
+  background-color: #f5f8d2;
+  /* 背景色を薄い黄色に */
+  border-radius: 16px;
+  /* 角を丸くする */
+  padding: 20px;
+  /* 内側の余白を追加 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* 影を追加 */
+  margin: 20px 0;
+  /* 上下の余白を追加 */
+  width: 100%;
+  /* 幅を100%にする */
+  box-sizing: border-box;
+  /* ボックスのサイズをボーダーとパディングを含める */
+}
+
+.diary h2 {
+  font-size: 1.5em;
+  /* 見出しのフォントサイズを大きくする */
+  margin-bottom: 10px;
+  /* 見出しの下に余白を追加 */
+}
+
+.diary p {
+  font-size: 1em;
+  /* 段落のフォントサイズを設定 */
+  line-height: 1.5;
+  /* 行間を設定 */
+}
+
 
 .form {
   position: absolute;
